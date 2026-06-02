@@ -1,0 +1,1787 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/1/2026 10:58:19 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="PCMASTERRACE_TN"
+  DTS:CreatorName="PCMASTERRACE_TN\ricko"
+  DTS:DTSID="{95A1AC25-C583-405C-A4D9-699D9B3B3752}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="Package_stock"
+  DTS:PackageType="5"
+  DTS:VersionBuild="68"
+  DTS:VersionGUID="{CDE31A24-9015-41D9-A780-75831A1C525B}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{993B5A67-CD79-41EB-98DD-EDA9FEEEDDF6}"
+      DTS:ObjectName="Gestionnaire de connexions de fichiers plats">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\ricko\Downloads\input_csv\categories.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="category_code"
+              DTS:DTSID="{24A5EFB3-4E4A-48EE-A41D-2501ADFA27DA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="category_name"
+              DTS:DTSID="{C7A4F74C-789F-460D-96AD-535474E37549}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9BFCDFE6-E383-4A80-A3C3-B6B2411C5425}"
+      DTS:ObjectName="Gestionnaire de connexions de fichiers plats 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\ricko\OneDrive\Bureau\IHEC\Stage Wimbee\input_csv\categories.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="category_code"
+              DTS:DTSID="{C424823B-4CAB-4486-B363-FA1D35B82C85}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="category_name"
+              DTS:DTSID="{0891FB94-A6A2-4C93-A269-B0B010B5BA14}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{48E973DA-6C17-4D26-87EB-A65190C3B96D}"
+      DTS:ObjectName="Gestionnaire de connexions de fichiers plats 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\ricko\OneDrive\Bureau\IHEC\Stage Wimbee\input_csv\products.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="product_code"
+              DTS:DTSID="{51641724-0AB9-4A44-B05B-61B5168694B3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="product_name"
+              DTS:DTSID="{386F8AD5-73B2-4892-8832-B55A5FEE9142}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="category_code"
+              DTS:DTSID="{195A3CA3-7400-461E-8574-DDB871621EAF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="unit_price"
+              DTS:DTSID="{DDCB0B45-D1E9-4FEA-9D1A-06A9C02FE2F0}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 3]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{08EDC753-6DD2-4B01-8768-DA1BFC4388D8}"
+      DTS:ObjectName="Gestionnaire de connexions de fichiers plats 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\ricko\OneDrive\Bureau\IHEC\Stage Wimbee\input_csv\salespersons.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="salesperson_code"
+              DTS:DTSID="{15286E55-172E-400C-8D50-26D512A5F484}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="salesperson_name"
+              DTS:DTSID="{73620630-E7F7-44C9-AC3C-5C8B4BD98ADC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="email"
+              DTS:DTSID="{A9967B62-DAFF-412A-83B4-21F36179C0AA}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 4]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{FB1359B0-3E99-47D0-A0A0-55A0BA4EDB98}"
+      DTS:ObjectName="Gestionnaire de connexions de fichiers plats 4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\ricko\OneDrive\Bureau\IHEC\Stage Wimbee\input_csv\sales.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="client_code"
+              DTS:DTSID="{0C7B3F5F-117F-4C96-A878-BE984C89693B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="product_code"
+              DTS:DTSID="{52706BF2-4AE0-42FF-BF1E-2E63AB6322F3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="salesperson_code"
+              DTS:DTSID="{F9B4BE75-EC15-4E58-8F43-A6B96A8AEA6D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="date"
+              DTS:DTSID="{C2C5B511-8BD7-4263-8C82-0816CD4525D2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="quantity"
+              DTS:DTSID="{E516C25C-2356-43A7-BF5F-DCF7040AC0E6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="total_amount"
+              DTS:DTSID="{D2D08106-B1B1-42AE-A905-8179CED8C8D3}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 5]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{32DCB83E-752D-4276-82F6-5215C2A2679A}"
+      DTS:ObjectName="Gestionnaire de connexions de fichiers plats 5">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\ricko\OneDrive\Bureau\IHEC\Stage Wimbee\input_csv\stock.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="product_code"
+              DTS:DTSID="{316A278A-58F9-4152-8E85-209B6615DA9B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="region_code"
+              DTS:DTSID="{DFAE20D9-9588-4871-8D52-7F06ACE4B534}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="date"
+              DTS:DTSID="{3CA20247-00E1-4D8F-B172-4850CF8A4DFD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="stock_quantity"
+              DTS:DTSID="{7D00D801-B4CD-4634-A770-1D83B7DA5419}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PCMASTERRACE_TN\MSSQLSERVERWIMBE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{997E5E79-5822-4A0A-9A4D-E24C9C8EF0D3}"
+      DTS:ObjectName="PCMASTERRACE_TN\MSSQLSERVERWIMBE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=PCMASTERRACE_TN\MSSQLSERVERWIMBE;Provider=MSOLEDBSQL19.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PCMASTERRACE_TN\MSSQLSERVERWIMBE.LOG_BD]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3D6097EC-7812-47B8-92B7-9986DFEBE110}"
+      DTS:ObjectName="PCMASTERRACE_TN\MSSQLSERVERWIMBE.LOG_BD">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=PCMASTERRACE_TN\MSSQLSERVERWIMBE;Initial Catalog=LOG_BD;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package_Catégorie-{3D6097EC-7812-47B8-92B7-9986DFEBE110}PCMASTERRACE_TN\MSSQLSERVERWIMBE.LOG_BD;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PCMASTERRACE_TN\MSSQLSERVERWIMBE.Wimbee_BD]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{BA8CD2CE-9790-4F37-B3B6-43AD3A2914BD}"
+      DTS:ObjectName="PCMASTERRACE_TN\MSSQLSERVERWIMBE.Wimbee_BD">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=PCMASTERRACE_TN\MSSQLSERVERWIMBE;Initial Catalog=Wimbee_BD;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{BA8CD2CE-9790-4F37-B3B6-43AD3A2914BD}PCMASTERRACE_TN\MSSQLSERVERWIMBE.Wimbee_BD;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PCMASTERRACE_TN\MSSQLSERVERWIMBE.Wimbee_BD 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F2C4FD42-A4F7-46E3-A2AE-CD054649CC3B}"
+      DTS:ObjectName="PCMASTERRACE_TN\MSSQLSERVERWIMBE.Wimbee_BD 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=PCMASTERRACE_TN\MSSQLSERVERWIMBE;Initial Catalog=Wimbee_BD;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{F2C4FD42-A4F7-46E3-A2AE-CD054649CC3B}PCMASTERRACE_TN\MSSQLSERVERWIMBE.Wimbee_BD 1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PCMASTERRACE_TN\MSSQLSERVERWIMBE.Wimbee_BD 2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{11F66B50-020C-46ED-933F-529FECE70B00}"
+      DTS:ObjectName="PCMASTERRACE_TN\MSSQLSERVERWIMBE.Wimbee_BD 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=PCMASTERRACE_TN\MSSQLSERVERWIMBE;Initial Catalog=Wimbee_BD;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{11F66B50-020C-46ED-933F-529FECE70B00}PCMASTERRACE_TN\MSSQLSERVERWIMBE.Wimbee_BD 2;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{EE3FC248-9067-4F89-8147-FDBA2251F5B7}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LignesRejetees">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C83BA2E6-F018-4FBA-B255-B95FB01AFFC6}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LignesTraitees">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BF5B2978-FC4B-4E47-B118-1362C7750887}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LogID">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Details Update E"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{5c335681-0566-4c43-ae19-474272c9a48e}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Details Update E"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{3D6097EC-7812-47B8-92B7-9986DFEBE110}"
+          SQLTask:SqlStatementSource="UPDATE Log_BD.dbo.transaction_details &#xA;SET lignes_traitees = ?, lignes_rejetees=?&#xA;WHERE log_id = ?&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::LignesTraitees"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::LignesRejetees"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="2"
+            SQLTask:DtsVariableName="User::LogID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Details Update S"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{373ba8c2-0434-423e-9142-fbd9702c138e}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Details Update S"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{3D6097EC-7812-47B8-92B7-9986DFEBE110}"
+          SQLTask:SqlStatementSource="UPDATE Log_BD.dbo.transaction_details &#xA;SET lignes_traitees = ?, lignes_rejetees=?, &#xA;duree = (SELECT DATEDIFF(second, date, GETDATE()) FROM Log_BD.dbo.transaction_log WHERE log_id = ?)&#xA;WHERE log_id = ?&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::LignesTraitees"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::LignesRejetees"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="2"
+            SQLTask:DtsVariableName="User::LogID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="3"
+            SQLTask:DtsVariableName="User::LogID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Init Details"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{0df8fb64-4a37-4d32-a2a3-8951369f5013}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Init Details"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{3D6097EC-7812-47B8-92B7-9986DFEBE110}"
+          SQLTask:SqlStatementSource="INSERT INTO Log_BD.dbo.transaction_details (log_id) &#xA;VALUES (?);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::LogID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Init Logs"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{4f67bbaf-a061-4991-b76f-f7d880cdad38}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Init Logs"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{3D6097EC-7812-47B8-92B7-9986DFEBE110}"
+          SQLTask:SqlStatementSource="INSERT INTO Log_BD.dbo.transaction_log (nom_package, date, statut) &#xA;VALUES (?, GETDATE(), 'En cours');&#xA;&#xA;SELECT SCOPE_IDENTITY();"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::LogID" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="System::PackageName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Log Update E"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{addb0394-62a1-4907-90fd-cdc6f0b054fa}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Log Update E"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{3D6097EC-7812-47B8-92B7-9986DFEBE110}"
+          SQLTask:SqlStatementSource="UPDATE Log_BD.dbo.transaction_log &#xA;SET statut = 'Echec' &#xA;WHERE log_id = ?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::LogID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Log Update S"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{10192d3f-5fa3-44ca-aecf-e9366e7190dc}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Log Update S"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{3D6097EC-7812-47B8-92B7-9986DFEBE110}"
+          SQLTask:SqlStatementSource="UPDATE Log_BD.dbo.transaction_log &#xA;SET statut = 'Succès' &#xA;WHERE log_id = ?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::LogID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Package_stock"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{DE6649EE-E372-4C0C-9021-0CB4D4CE4C01}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Package_stock"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="Name">@[System::PackageName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Package_stock\Colonne dérivée"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="Colonne dérivée"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Package_stock\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Package_stock\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="date"
+                      lineageId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[date]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Package_stock\Colonne dérivée.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\Package_stock\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Package_stock\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[Id_Execution]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\Package_stock\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[Id_Execution]"
+                      name="Id_Execution"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">@[User::LogID]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@[User::LogID]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Package_stock\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[duree]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Package_stock\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[duree]"
+                      name="duree"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">0</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Package_stock\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[date_propre]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Package_stock\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[date_propre]"
+                      name="date_propre"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(DT_DBDATE)#{Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[date]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DBDATE)date</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Package_stock\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\Package_stock\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Package_stock\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Package_stock\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Package_stock\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Package_stock\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Package_stock\Conversion de données"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversion de données;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Conversion de données"
+              name="Conversion de données"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Package_stock\Conversion de données.Inputs[Entrée de conversion de données]"
+                  name="Entrée de conversion de données">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Package_stock\Conversion de données.Inputs[Entrée de conversion de données].Columns[product_code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="product_code"
+                      lineageId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[product_code]" />
+                    <inputColumn
+                      refId="Package\Package_stock\Conversion de données.Inputs[Entrée de conversion de données].Columns[region_code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="region_code"
+                      lineageId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[region_code]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Package_stock\Conversion de données.Outputs[Sortie de conversion de données]"
+                  exclusionGroup="1"
+                  name="Sortie de conversion de données"
+                  synchronousInputId="Package\Package_stock\Conversion de données.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Package_stock\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of product_code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Package_stock\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of product_code]"
+                      name="Copy of product_code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[product_code]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Package_stock\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of region_code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Package_stock\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of region_code]"
+                      name="Copy of region_code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[region_code]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Package_stock\Conversion de données.Outputs[Sortie d'erreur de conversion de données]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de conversion de données"
+                  synchronousInputId="Package\Package_stock\Conversion de données.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Package_stock\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Package_stock\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Package_stock\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Package_stock\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Package_stock\Nombre de lignes ok"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Nombre de lignes;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Compte les lignes à mesure qu'elles franchissent un flux de données. Par exemple, utilisez le nombre de lignes traitées pour déterminer s'il faut ou non effectuer les opérations de nettoyage, ou mettez à jour le texte dans un message électronique pour communiquer l'état du traitement."
+              name="Nombre de lignes ok">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nombre de lignes."
+                  name="VariableName">User::LignesTraitees</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Package_stock\Nombre de lignes ok.Inputs[Nombre de lignes entrée 1]"
+                  hasSideEffects="true"
+                  name="Nombre de lignes entrée 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Package_stock\Nombre de lignes ok.Outputs[Nombre de lignes sortie 1]"
+                  name="Nombre de lignes sortie 1"
+                  synchronousInputId="Package\Package_stock\Nombre de lignes ok.Inputs[Nombre de lignes entrée 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Package_stock\Source du fichier plat"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Source du fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Source du fichier plat"
+              localeId="1036"
+              name="Source du fichier plat"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si les colonnes dont la longueur est zéro sont traitées comme des valeurs NULL."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom d'une colonne de sortie contenant le nom du fichier. Si aucun nom n'est spécifié, aucune colonne de sortie contenant le nom du fichier ne sera générée."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Package_stock\Source du fichier plat.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 5]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 5]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat]"
+                  name="Sortie de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[product_code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[product_code]"
+                      length="50"
+                      lineageId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[product_code]"
+                      name="product_code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[date]"
+                      length="50"
+                      lineageId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[date]"
+                      name="date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[region_code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[region_code]"
+                      length="50"
+                      lineageId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[region_code]"
+                      name="region_code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[stock_quantity]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[stock_quantity]"
+                      length="50"
+                      lineageId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[stock_quantity]"
+                      name="stock_quantity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[product_code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="product_code" />
+                    <externalMetadataColumn
+                      refId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="date" />
+                    <externalMetadataColumn
+                      refId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[region_code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="region_code" />
+                    <externalMetadataColumn
+                      refId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[stock_quantity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="stock_quantity" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Package_stock\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Package_stock\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Colonne de sortie d'erreur de source de fichier plat"
+                      lineageId="Package\Package_stock\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      name="Colonne de sortie d'erreur de source de fichier plat" />
+                    <outputColumn
+                      refId="Package\Package_stock\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Package_stock\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Package_stock\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Package_stock\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Package_stock\stock"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="stock"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[ODS_stock]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Package_stock\stock.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PCMASTERRACE_TN\MSSQLSERVERWIMBE.Wimbee_BD]"
+                  connectionManagerRefId="Package.ConnectionManagers[PCMASTERRACE_TN\MSSQLSERVERWIMBE.Wimbee_BD]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Package_stock\stock.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Package_stock\stock.Inputs[Entrée de destination OLE DB].Columns[Copy of product_code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Copy of product_code"
+                      externalMetadataColumnId="Package\Package_stock\stock.Inputs[Entrée de destination OLE DB].ExternalColumns[product_code]"
+                      lineageId="Package\Package_stock\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of product_code]" />
+                    <inputColumn
+                      refId="Package\Package_stock\stock.Inputs[Entrée de destination OLE DB].Columns[Copy of region_code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Copy of region_code"
+                      externalMetadataColumnId="Package\Package_stock\stock.Inputs[Entrée de destination OLE DB].ExternalColumns[region_code]"
+                      lineageId="Package\Package_stock\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of region_code]" />
+                    <inputColumn
+                      refId="Package\Package_stock\stock.Inputs[Entrée de destination OLE DB].Columns[date_propre]"
+                      cachedDataType="dbDate"
+                      cachedName="date_propre"
+                      externalMetadataColumnId="Package\Package_stock\stock.Inputs[Entrée de destination OLE DB].ExternalColumns[date]"
+                      lineageId="Package\Package_stock\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[date_propre]" />
+                    <inputColumn
+                      refId="Package\Package_stock\stock.Inputs[Entrée de destination OLE DB].Columns[stock_quantity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="stock_quantity"
+                      externalMetadataColumnId="Package\Package_stock\stock.Inputs[Entrée de destination OLE DB].ExternalColumns[stock_quantity]"
+                      lineageId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[stock_quantity]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Package_stock\stock.Inputs[Entrée de destination OLE DB].ExternalColumns[product_code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="product_code" />
+                    <externalMetadataColumn
+                      refId="Package\Package_stock\stock.Inputs[Entrée de destination OLE DB].ExternalColumns[date]"
+                      dataType="wstr"
+                      length="10"
+                      name="date" />
+                    <externalMetadataColumn
+                      refId="Package\Package_stock\stock.Inputs[Entrée de destination OLE DB].ExternalColumns[region_code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="region_code" />
+                    <externalMetadataColumn
+                      refId="Package\Package_stock\stock.Inputs[Entrée de destination OLE DB].ExternalColumns[stock_quantity]"
+                      dataType="numeric"
+                      name="stock_quantity"
+                      precision="10" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Package_stock\stock.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\Package_stock\stock.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Package_stock\stock.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Package_stock\stock.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Package_stock\stock.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Package_stock\stock.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Package_stock.Paths[Nombre de lignes sortie 1]"
+              endId="Package\Package_stock\stock.Inputs[Entrée de destination OLE DB]"
+              name="Nombre de lignes sortie 1"
+              startId="Package\Package_stock\Nombre de lignes ok.Outputs[Nombre de lignes sortie 1]" />
+            <path
+              refId="Package\Package_stock.Paths[Sortie de colonne dérivée]"
+              endId="Package\Package_stock\Conversion de données.Inputs[Entrée de conversion de données]"
+              name="Sortie de colonne dérivée"
+              startId="Package\Package_stock\Colonne dérivée.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\Package_stock.Paths[Sortie de conversion de données]"
+              endId="Package\Package_stock\Nombre de lignes ok.Inputs[Nombre de lignes entrée 1]"
+              name="Sortie de conversion de données"
+              startId="Package\Package_stock\Conversion de données.Outputs[Sortie de conversion de données]" />
+            <path
+              refId="Package\Package_stock.Paths[Sortie de source de fichier plat]"
+              endId="Package\Package_stock\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+              name="Sortie de source de fichier plat"
+              startId="Package\Package_stock\Source du fichier plat.Outputs[Sortie de source de fichier plat]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate stock"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{169649e3-b2f9-4b34-8b42-63bf9ca1982c}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate stock"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{3D6097EC-7812-47B8-92B7-9986DFEBE110}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE Wimbee_BD.dbo.ODS_stock;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte]"
+      DTS:CreationName=""
+      DTS:DTSID="{86c062bc-7d61-4808-bb77-f2b70f0c53f1}"
+      DTS:From="Package\Truncate stock"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte"
+      DTS:To="Package\Init Logs" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{E19B8C1E-07B6-4526-BD92-BD06BE451410}"
+      DTS:From="Package\Init Details"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte 1"
+      DTS:To="Package\Package_stock" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{2E7EC0C8-7D76-4119-8ED0-89A87DEE3751}"
+      DTS:From="Package\Package_stock"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte 2"
+      DTS:To="Package\Details Update S" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{46168488-538b-4cc7-be1e-64608580ba6f}"
+      DTS:From="Package\Init Logs"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte 3"
+      DTS:To="Package\Init Details" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{BE398ED2-0E13-4600-A41D-9FA061D842F2}"
+      DTS:From="Package\Package_stock"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte 4"
+      DTS:To="Package\Details Update E"
+      DTS:Value="1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte 4 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{366a72b5-f58a-4a2e-b5ae-5898405ccb42}"
+      DTS:From="Package\Details Update S"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte 4 1"
+      DTS:To="Package\Log Update S" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{46275e13-857a-4f59-afe1-01f783886100}"
+      DTS:From="Package\Details Update E"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte 6"
+      DTS:To="Package\Log Update E" />
+  </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{878A5EAF-C1CB-4170-B4A2-4E345A6B8B1C}"
+      DTS:EventID="-4013374"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="Propriété de propagation de l'événement"
+          DTS:DTSID="{C4B7F865-C44E-4F87-A3E6-5E59D6FAC30A}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Log Erreur Système"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Tâche d'exécution de requêtes SQL"
+          DTS:DTSID="{21140e37-54b4-4108-bd05-c654e8870e64}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Log Erreur Système"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{3D6097EC-7812-47B8-92B7-9986DFEBE110}"
+              SQLTask:SqlStatementSource="INSERT INTO Log_BD.dbo.transaction_errors (log_id, ligne_concernée, erreurs_rencontrées)&#xA;VALUES (?, ?, ?);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::LogID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="System::ErrorDescription"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<Objects
+  Version="8">
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="147.2,41.6"
+          Id="Package\Package_stock"
+          TopLeft="256.928571963797,265.4999997721" />
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Init Details"
+          TopLeft="319.542857434799,153.088235164751" />
+        <NodeLayout
+          Size="119.2,41.6"
+          Id="Package\Init Logs"
+          TopLeft="321.685714582218,85.8764705346115" />
+        <NodeLayout
+          Size="148,41.6"
+          Id="Package\Truncate stock"
+          TopLeft="296.685714528999,9.32352940841291" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte]"
+          TopLeft="370.685714528999,50.9235294084129">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.6000000532187,34.9529411261986"
+              Start="0,0"
+              End="10.6000000532187,27.4529411261986">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.4764705630993" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.4764705630993"
+                    Point2="0,17.4764705630993"
+                    Point3="4,17.4764705630993" />
+                  <mssgle:LineSegment
+                    End="6.60000005321865,17.4764705630993" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.60000005321865,17.4764705630993"
+                    Point2="10.6000000532187,17.4764705630993"
+                    Point3="10.6000000532187,21.4764705630993" />
+                  <mssgle:LineSegment
+                    End="10.6000000532187,27.4529411261986" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte 3]"
+          TopLeft="382.814286008508,127.476470534612">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25.6117646301392"
+              Start="0,0"
+              End="0,18.1117646301392">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.1117646301392" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte 1]"
+          TopLeft="384.342857434799,194.688235164751">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-53.8142854710023,70.8117646073486"
+              Start="0,0"
+              End="-53.8142854710023,63.3117646073486">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.4058823036743" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.4058823036743"
+                    Point2="0,35.4058823036743"
+                    Point3="-4,35.4058823036743" />
+                  <mssgle:LineSegment
+                    End="-49.8142854710023,35.4058823036743" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-49.8142854710023,35.4058823036743"
+                    Point2="-53.8142854710023,35.4058823036743"
+                    Point3="-53.8142854710023,39.4058823036743" />
+                  <mssgle:LineSegment
+                    End="-53.8142854710023,63.3117646073486" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\Details Update E"
+          TopLeft="399.071429409239,388.817646848351" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\Details Update S"
+          TopLeft="86.9285716019114,380.099999760705" />
+        <NodeLayout
+          Size="141.6,41.6"
+          Id="Package\Log Update E"
+          TopLeft="404.785715135688,492.111764390843" />
+        <NodeLayout
+          Size="141.6,41.6"
+          Id="Package\Log Update S"
+          TopLeft="96.9285716231988,502.347058566136" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte 4 1]"
+          TopLeft="166.328571612555,421.699999760705">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,80.6470588054314"
+              Start="0,0"
+              End="0,73.1470588054314">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,73.1470588054314" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte 6]"
+          TopLeft="476.328572272463,430.417646848351">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61.6941175424923"
+              Start="0,0"
+              End="0,54.1941175424923">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.1941175424923" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte 2]"
+          TopLeft="330.528571963797,307.0999997721">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-165.600000361885,72.9999999886051"
+              Start="0,0"
+              End="-165.600000361885,65.4999999886051">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.4999999943025" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.4999999943025"
+                    Point2="0,36.4999999943025"
+                    Point3="-4,36.4999999943025" />
+                  <mssgle:LineSegment
+                    End="-161.600000361885,36.4999999943025" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-161.600000361885,36.4999999943025"
+                    Point2="-165.600000361885,36.4999999943025"
+                    Point3="-165.600000361885,40.4999999943025" />
+                  <mssgle:LineSegment
+                    End="-165.600000361885,65.4999999886051" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte 4]"
+          TopLeft="353.728571963797,307.0999997721">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="123.342857445443,81.7176470762512"
+              Start="0,0"
+              End="123.342857445443,74.2176470762512">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.2142694567989" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.2142694567989"
+                    Point2="0,33.2142694567989"
+                    Point3="4,33.2142694567989" />
+                  <mssgle:LineSegment
+                    End="119.342857445443,33.2142694567989" />
+                  <mssgle:CubicBezierSegment
+                    Point1="119.342857445443,33.2142694567989"
+                    Point2="123.342857445443,33.2142694567989"
+                    Point3="123.342857445443,37.2142694567989" />
+                  <mssgle:LineSegment
+                    End="123.342857445443,74.2176470762512" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="48.2884013789713,38.2142694567989,26.7660546875,12.1318359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Package_stock">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\Package_stock\Source du fichier plat"
+          TopLeft="259.999996125698,25.999997971689" />
+        <NodeLayout
+          Size="175.2,41.6"
+          Id="Package\Package_stock\Nombre de lignes ok"
+          TopLeft="167.999997496605,358.399994874" />
+        <NodeLayout
+          Size="102.4,41.6"
+          Id="Package\Package_stock\stock"
+          TopLeft="188.999997183681,476.999992892146" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Package_stock\Colonne dérivée"
+          TopLeft="269.142857392224,109.45882352673" />
+        <NodeLayout
+          Size="188,41.6"
+          Id="Package\Package_stock\Conversion de données"
+          TopLeft="257.971429004779,221.058823458361" />
+        <EdgeLayout
+          Id="Package\Package_stock.Paths[Sortie de source de fichier plat]"
+          TopLeft="347.771426758961,67.599997971689">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.8588255550415"
+              Start="0,0"
+              End="0,34.3588255550415">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.3588255550415" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Package_stock.Paths[Sortie de conversion de données]"
+          TopLeft="351.971429004779,262.658823458361">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-96.3714315081737,95.7411714156394"
+              Start="0,0"
+              End="-96.3714315081737,88.2411714156394">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.8705857078197" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.8705857078197"
+                    Point2="0,47.8705857078197"
+                    Point3="-4,47.8705857078197" />
+                  <mssgle:LineSegment
+                    End="-92.3714315081737,47.8705857078197" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-92.3714315081737,47.8705857078197"
+                    Point2="-96.3714315081737,47.8705857078197"
+                    Point3="-96.3714315081737,51.8705857078197" />
+                  <mssgle:LineSegment
+                    End="-96.3714315081737,88.2411714156394" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Package_stock.Paths[Sortie de colonne dérivée]"
+          TopLeft="349.157143198501,151.05882352673">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,69.9999999316305"
+              Start="0,0"
+              End="0,62.4999999316305">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.4999999316305" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Package_stock.Paths[Nombre de lignes sortie 1]"
+          TopLeft="255.599997496605,399.999994874">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-15.400000312924,76.999998018146"
+              Start="0,0"
+              End="-15.400000312924,69.499998018146">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.499999009073" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.499999009073"
+                    Point2="0,38.499999009073"
+                    Point3="-4,38.499999009073" />
+                  <mssgle:LineSegment
+                    End="-11.400000312924,38.499999009073" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-11.400000312924,38.499999009073"
+                    Point2="-15.400000312924,38.499999009073"
+                    Point3="-15.400000312924,42.499999009073" />
+                  <mssgle:LineSegment
+                    End="-15.400000312924,69.499998018146" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Package_stock\stock">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package.EventHandlers[OnError]\Log Erreur Système"
+          TopLeft="388.999995097518,154.99999858439" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
