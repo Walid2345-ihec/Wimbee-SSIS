@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Package_DW_Dimtemps"
   DTS:PackageType="5"
-  DTS:VersionBuild="76"
-  DTS:VersionGUID="{52717A05-18CB-4D1D-B86E-D89E9B25DE9F}">
+  DTS:VersionBuild="78"
+  DTS:VersionGUID="{97553169-2EEC-404E-B216-12831D919893}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -208,7 +208,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAPMDODqyD2UyZUyjgqP8JpgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAzQUKtbrT3LNkoudmUTCotcJMna7cyuEN2z9mfM3yfCAAAAAAOgAAAAAIAACAAAABSJWw0KcjkXYDS3PI2Zu6+V181QzG9trOD6kZUK57E7SAAAABKToaRkYW8F8foVp1aGBTILrujgNYvzzVy+mXJrn2sckAAAADjPB3K190APAgJUkZRTOEN2KTy1uBQmy+jMfJXW8wtz31eX5/bSck+eznYr8ECOUzR1w9GocZK5miMG4vf0NjV</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAPMDODqyD2UyZUyjgqP8JpgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABBK+PvRWsl5mCkwfIi87O8x+JDcITm3n0THpaoa8PC9wAAAAAOgAAAAAIAACAAAAAOFou2AmXXxuP5nec9FHkJYFoEAATJhRx4Z++i/Js4ryAAAADNXrneGyW3zwagVLIjclZjer41TBeVTogvol2xQOgSZ0AAAABs9cIVijNSmgX7Rnf2oNL+V3KL6ERaDr90hqV0hY7IXZPwUcGPU4Bcg1OHbEPDAcYmN7sMfuzVXbKeosTFsH3n</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -225,7 +225,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAPMDODqyD2UyZUyjgqP8JpgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAXAZrYa1Agr8pRl6McotCrM73K2airoZzMNsMTENAtQQAAAAAOgAAAAAIAACAAAACHwJJfqpJuPuR6mjNAatIgyqFcLiNhjfLlV0DEBfHXfyAAAAAziYPEs7cXG4n/8heQlszq/pn55Vc3URvmz1/vIiOVBkAAAACkxTDSDX8CxQfTFxV711w6yC4iEC32bqBwSKQj+QdQPfEziyQfdxjQL6FdO0Dg50BPxO/pTOe9wy0tvlKIcpzH</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAPMDODqyD2UyZUyjgqP8JpgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC3R75rDvQce/JfO+ACcUyfGZnIbQE1hA3Hy/e9GbQ/AgAAAAAOgAAAAAIAACAAAAAeKRLQ3xgLmXrgzgOs1D5OuoESuoc3B4LxRyjhlP9QTiAAAACuKpvdVTKmr4FNaYsAgNTfsVpUj4U8eagdjkC6owiA+EAAAAC0NXxWJ/8VL8bwyfi9YnWM4mbZvUaiYH6pC7OCKpxlOUW8JCfe7B52F9qV5dFW7oWPq7kEronQwS1uiTSoQPN3</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -242,7 +242,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAPMDODqyD2UyZUyjgqP8JpgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADZIHbrCgqUncfkvEnN4G21MIemD+0lks2jWCGANgAcygAAAAAOgAAAAAIAACAAAACS3gyx+xz82fXkk+IR1moDTQv1MaU/aXQMBO3Et//KRiAAAAB90mr4PuC9mX1ZqOIN4EPBy/S5vEUjo2r3JF6ocbamNkAAAACk3qkZfQLVo1FlfR+cvVgiGyg+QCQLJ5fWNeNY+6DX3/AzPpUXD8Id8KWmSMVmdHl5mF/OO6KzWDRwyEAAJtlp</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAPMDODqyD2UyZUyjgqP8JpgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAgdQQ+WLPPuZBHGX92fjAHgBRIceGRjCMjBClRoolpJgAAAAAOgAAAAAIAACAAAAD7PnT0fWGE1jAoVlfKQ8WxsNxm35fYmstOC9ZiXadtZSAAAAD5/F6wL9sVw13h0u72PAmz9eTx0lHoU1KyxVRyEZdcY0AAAABpLc9Gwfb2HgwUuH4ceLY5BkabvLEzaCAcR0jkhTDuhrQ01xe2Xr6pHmTDjutTWURjUvbAGYojnb3xH5sc4LNM</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -399,7 +399,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{24999E0A-74E3-445C-98D2-774204D7DD93}"
-          SQLTask:SqlStatementSource="INSERT INTO dbo.DWH_Dim_Date (date_id, date_complete, annee, mois, nom_mois, trimestre, jour)&#xA;SELECT &#xA;    CAST(FORMAT(DATEADD(day, ROW_NUMBER() OVER (ORDER BY object_id) - 1, '2024-01-01'), 'yyyyMMdd') AS INT),&#xA;    DATEADD(day, ROW_NUMBER() OVER (ORDER BY object_id) - 1, '2024-01-01'),&#xA;    YEAR(DATEADD(day, ROW_NUMBER() OVER (ORDER BY object_id) - 1, '2024-01-01')),&#xA;    MONTH(DATEADD(day, ROW_NUMBER() OVER (ORDER BY object_id) - 1, '2024-01-01')),&#xA;    FORMAT(DATEADD(day, ROW_NUMBER() OVER (ORDER BY object_id) - 1, '2024-01-01'), 'MMMM', 'fr-FR'),&#xA;    DATEPART(quarter, DATEADD(day, ROW_NUMBER() OVER (ORDER BY object_id) - 1, '2024-01-01')),&#xA;    DAY(DATEADD(day, ROW_NUMBER() OVER (ORDER BY object_id) - 1, '2024-01-01'))&#xA;FROM sys.all_objects;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="EXEC dbo.sp_Populate_Dim_Date '2024-01-01', '2026-12-31';" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -636,7 +636,7 @@
         <NodeLayout
           Size="118.4,41.6"
           Id="Package\Init date"
-          TopLeft="212.85714331026,247.364705687967" />
+          TopLeft="212.142857594454,246.599999806284" />
         <NodeLayout
           Size="129.6,41.6"
           Id="Package\Init Details"
@@ -659,26 +659,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="45.114285822243,61.9999999316293"
+              EndConnector="44.4000001064368,61.2352940499464"
               Start="0,0"
-              End="45.114285822243,54.4999999316293">
+              End="44.4000001064368,53.7352940499464">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.9999999658147" />
+                    End="0,26.6176470249732" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26.9999999658147"
-                    Point2="0,30.9999999658147"
-                    Point3="4,30.9999999658147" />
+                    Point1="0,26.6176470249732"
+                    Point2="0,30.6176470249732"
+                    Point3="4,30.6176470249732" />
                   <mssgle:LineSegment
-                    End="41.114285822243,30.9999999658147" />
+                    End="40.4000001064368,30.6176470249732" />
                   <mssgle:CubicBezierSegment
-                    Point1="41.114285822243,30.9999999658147"
-                    Point2="45.114285822243,30.9999999658147"
-                    Point3="45.114285822243,34.9999999658147" />
+                    Point1="40.4000001064368,30.6176470249732"
+                    Point2="44.4000001064368,30.6176470249732"
+                    Point3="44.4000001064368,34.6176470249732" />
                   <mssgle:LineSegment
-                    End="45.114285822243,54.4999999316293" />
+                    End="44.4000001064368,53.7352940499464" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -689,30 +689,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Contrainte 2]"
-          TopLeft="253.65714331026,288.964705687967">
+          TopLeft="252.942857594454,288.199999806284">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-84.2285716870612,72.7411763479246"
+              EndConnector="-83.514285971255,73.5058822296076"
               Start="0,0"
-              End="-84.2285716870612,65.2411763479246">
+              End="-83.514285971255,66.0058822296076">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.6783999499533" />
+                    End="0,25.9903999496799" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25.6783999499533"
-                    Point2="0,29.6783999499533"
-                    Point3="-4,29.6783999499533" />
+                    Point1="0,25.9903999496799"
+                    Point2="0,29.9903999496799"
+                    Point3="-4,29.9903999496799" />
                   <mssgle:LineSegment
-                    End="-80.2285716870612,29.6783999499533" />
+                    End="-79.514285971255,29.9903999496799" />
                   <mssgle:CubicBezierSegment
-                    Point1="-80.2285716870612,29.6783999499533"
-                    Point2="-84.2285716870612,29.6783999499533"
-                    Point3="-84.2285716870612,33.6783999499533" />
+                    Point1="-79.514285971255,29.9903999496799"
+                    Point2="-83.514285971255,29.9903999496799"
+                    Point3="-83.514285971255,33.9903999496799" />
                   <mssgle:LineSegment
-                    End="-84.2285716870612,65.2411763479246" />
+                    End="-83.514285971255,66.0058822296076" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -779,37 +779,37 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Contrainte 5]"
-          TopLeft="290.45714331026,288.964705687967">
+          TopLeft="289.742857594454,288.199999806284">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="149.685714603504,72.2823528553786"
+              EndConnector="150.40000031931,73.0470587370616"
               Start="0,0"
-              End="149.685714603504,64.7823528553786">
+              End="150.40000031931,65.5470587370616">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.4911999649945" />
+                    End="0,25.8031999647211" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25.4911999649945"
-                    Point2="0,29.4911999649945"
-                    Point3="4,29.4911999649945" />
+                    Point1="0,25.8031999647211"
+                    Point2="0,29.8031999647211"
+                    Point3="4,29.8031999647211" />
                   <mssgle:LineSegment
-                    End="145.685714603504,29.4911999649945" />
+                    End="146.40000031931,29.8031999647211" />
                   <mssgle:CubicBezierSegment
-                    Point1="145.685714603504,29.4911999649945"
-                    Point2="149.685714603504,29.4911999649945"
-                    Point3="149.685714603504,33.4911999649945" />
+                    Point1="146.40000031931,29.8031999647211"
+                    Point2="150.40000031931,29.8031999647211"
+                    Point3="150.40000031931,33.8031999647211" />
                   <mssgle:LineSegment
-                    End="149.685714603504,64.7823528553786" />
+                    End="150.40000031931,65.5470587370616" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="61.459829958002,34.4911999649945,26.7660546875,12.1318359375"
+              BoundingBox="61.8169728159051,34.8031999647211,26.7660546875,12.1318359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
